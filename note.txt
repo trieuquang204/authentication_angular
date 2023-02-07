@@ -1,0 +1,25 @@
+1, Install Material UI: ng add @angular/material
+- Tạo file material.module.ts
+- Import file trong app module
+
+- Trong app module import reactive form, HttpClientModule,
+
+
+2, Install Toast Alert : yarn add
+- import ToastrModule vào app module
+
+3, Trong file angular.json khai báo thêm phần style của Toastr
+
+
+4, Cài đặt & run json server
+
+
+* ng g c new-component --module app
+
+ng g s service/auth
+$ ng g g guard/auth
+
+
+5, Tạo file app-routing.module.ts
+
+json-server --watch db.json
