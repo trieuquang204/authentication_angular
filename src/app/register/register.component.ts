@@ -22,15 +22,4 @@ export class RegisterComponent {
     role: this.builder.control(''),
     isactive: this.builder.control(false)
   })
-
-  // proceedregisteration() {
-  //   if(this.registerform.valid) {
-  //     this.service.registerUser(this.registerform.value).subscribe(res => {
-  //       this.toastr.success('register ok')
-  //       this.router.navigate(['login'])
-  //     })
-  //   } else {
-  //     this.toastr.warning('Invalid ')
-  //   }
-  // }
 }

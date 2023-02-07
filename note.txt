@@ -23,3 +23,6 @@ $ ng g g guard/auth
 5, Tạo file app-routing.module.ts
 
 json-server --watch db.json
+
+https://www.youtube.com/watch?v=0wXlkvYOK0w&t=2356s
+46
