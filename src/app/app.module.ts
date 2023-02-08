@@ -34,9 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     AppRoutingModule,
     ToastrModule.forRoot({
-      timeOut: 10000,
-      positionClass: 'toast-top-right',
+      maxOpened: 1,
       preventDuplicates: true,
+      autoDismiss: true
     }),
   ],
   providers: [],
