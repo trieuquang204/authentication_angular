@@ -6,7 +6,7 @@
       "password": "1234",
       "email": "test@gmail.com",
       "gender": "male",
-      "role": "admin",
+      "role": "test",
       "isactive": true
     },
     {
@@ -16,7 +16,7 @@
       "email": "test@gmail.com",
       "gender": "male",
       "role": "",
-      "isactive": true
+      "isactive": false
     },
     {
       "id": "testuser",
@@ -42,8 +42,17 @@
       "password": "1234",
       "email": "te@in.com",
       "gender": "male",
-      "role": "tech",
-      "isactive": true
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "test3",
+      "name": "test3",
+      "password": "@!Quangquang11",
+      "email": "test2@gmail.com",
+      "gender": "female",
+      "role": "",
+      "isactive": false
     }
   ],
   "role": [
@@ -54,6 +63,10 @@
     {
       "code": "tech",
       "name": "Technician"
+    },
+    {
+      "code": "test",
+      "name": "Test"
     }
   ]
 }

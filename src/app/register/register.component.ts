@@ -22,4 +22,16 @@ export class RegisterComponent {
     role: this.builder.control(''),
     isactive: this.builder.control(false)
   })
+
+
+  proceedregister() {
+    if (this.registerform.valid) {
+      this.service.registerUser(this.registerform.value).subscribe(result => {
+        this.toastr.success('Please contact admin for enable access.','Registered successfully')
+        this.router.navigate(['login'])
+      });
+    } else {
+      this.toastr.warning('Please enter valid data.')
+    }
+  }
 }

@@ -14,6 +14,10 @@ export class AuthService {
     return this.http.get(this.apiurl);
   }
 
+  getAllByRole() {
+    return this.http.get('http://localhost:3000/role');
+  }
+
   getByCode(code: any) {
     return this.http.get(this.apiurl+'/'+code);
   }
@@ -24,6 +28,14 @@ export class AuthService {
 
   getUserRole() {
     return sessionStorage.getItem('userrole') != null?sessionStorage.getItem('userrole')?.toString():'';
+  }
+
+  updateUser(id:any, inputdata:any){
+    return this.http.put(this.apiurl+'/'+id,inputdata);
+  }
+
+  registerUser(inputdata:any){
+    return this.http.post(this.apiurl,inputdata)
   }
 
 }

@@ -2,6 +2,9 @@ import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { MatDialog } from '@angular/material/dialog';
+
+import { UpdatepopupComponent } from '../updatepopup/updatepopup.component'
 
 import { AuthService } from '../service/auth.service';
 
@@ -11,7 +14,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./userlisting.component.css']
 })
 export class UserlistingComponent {
-  constructor(private service : AuthService) {
+  constructor(private service : AuthService, private dialog: MatDialog) {
     this.loadUser()
   }
 
@@ -32,6 +35,21 @@ export class UserlistingComponent {
   displayedColumns: string[] = ['username', 'name', 'email', 'role', 'status', 'action'];
 
   updateUser(id: any) {
+    const popup = this.dialog.open(UpdatepopupComponent, {
+      enterAnimationDuration: '1000ms',
+      exitAnimationDuration: '500ms',
+      width: '30%',
+      data: {
+        usercode: id
+      }
+    })
+
+    popup.afterClosed().subscribe(res => {
+      this.loadUser();
+    })
+  }
+
+  openDialog() {
 
   }
 }
