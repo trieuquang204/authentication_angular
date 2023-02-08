@@ -10,6 +10,15 @@
       "isactive": true
     },
     {
+      "id": "",
+      "name": "NT Infotech",
+      "password": "1234",
+      "email": "test@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": true
+    },
+    {
       "id": "testuser",
       "name": "Test User",
       "password": "1234",
